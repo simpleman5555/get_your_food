@@ -1,0 +1,51 @@
+<!-- banner -->
+<div class="container-fluid h-100">
+    <div class="row h-100">
+        <div class="banner position-relative">
+            <div class="position-absolute">
+                <h1>Fresh Cooked Food<br>At Your Door</h1>
+                <a routerLink="menu" class="btn btn-dark mt-4">ORDER NOW <i class="bi bi-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- steps -->
+<div class="container mt-5 mb-5 text-center">
+    <h1>How to get <span class="highlight">fresh food</span> ?</h1>
+    <div class="row mt-5">
+        <div class="col-lg-4 mt-2">
+            <div class="step-box">
+                <h1>1</h1>
+                <p>Select food</p>
+            </div>
+        </div>
+        <div class="col-lg-4 mt-2">
+            <div class="step-box">
+                <h1>2</h1>
+                <p>Fill the details</p>
+            </div>
+        </div>
+        <div class="col-lg-4 mt-2">
+            <div class="step-box">
+                <h1>3</h1>
+                <p>Your order will be delivered within minutes</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- food boxes -->
+<div class="container mt-4 mb-4">
+    <h1 class="text-center">Customers <span class="highlight">Favourite Foods</span></h1>
+    <div class="row">
+        <div class="col-lg-3 mt-3 food-box" *ngFor = "let food of foodList; index as i;">
+            <div *ngIf = "i <= 3">
+                <a [routerLink]="['/menu', food.id]">
+                    <img src="{{food.foodImg}}">
+                </a>
+                <h1>{{food.foodName}}</h1>
+                <p>{{food.foodPrice | currency: '$ '}}</p>
+            </div>
+        </div>
+    </div>
+    <a routerLink="menu" class="view-more-btn">View more <i class="bi bi-arrow-right"></i></a>
+</div>

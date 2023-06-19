@@ -1,0 +1,17 @@
+
+html {
+    padding: 0px;
+    margin: 0px;
+    --primary-color: #3FC060;
+    --secondary-color: #162328;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+}
+
+img {
+    object-fit: cover;
+    border-radius: 5px;
+}
